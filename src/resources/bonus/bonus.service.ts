@@ -61,7 +61,7 @@ export class BonusService {
     return bonus;
   }
 
-  async getOneUserAllUserBonuses(currentUser: IUser): Promise<IUserBonuses> {
+  async getUserAllBonuses(currentUser: IUser): Promise<IUserBonuses> {
     const userBonuses = await this.userBonusesRepository.find({
       where: { user: { id: currentUser.id } },
     });

@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import config from 'ormconfig';
-import { BonusModule, GameModule, UserModule } from './resources';
+import { BonusModule, GameModule, SkinModule, UserModule } from './resources';
 import { AuthMiddleware } from './common/middlewares';
 import { ScheduleModule } from '@nestjs/schedule';
 import { TasksModule } from './shared';
@@ -16,6 +16,7 @@ import { TasksModule } from './shared';
     BonusModule,
     GameModule,
     TasksModule,
+    SkinModule,
   ],
   controllers: [AppController],
   providers: [AppService],

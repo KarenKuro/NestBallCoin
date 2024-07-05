@@ -31,6 +31,7 @@ export class UserEntity extends BaseEntity {
   @JoinColumn({ name: 'referral_id' })
   referral: UserEntity;
 
+  @Exclude()
   @OneToMany(() => UserEntity, (user) => user.referral)
   friends: UserEntity[];
 

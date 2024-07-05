@@ -16,4 +16,8 @@ export class SkinEntity extends BaseEntity {
 
   @OneToMany(() => UserSkinEntity, (userSkins) => userSkins.skin)
   userSkins: UserSkinEntity[];
+
+  isAvailable?: boolean;
+
+  isActive?: boolean;
 }

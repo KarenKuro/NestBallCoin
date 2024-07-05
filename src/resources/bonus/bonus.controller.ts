@@ -77,7 +77,7 @@ export class BonusController {
   async getOneUserAllUserBonuses(
     @User() currentUser: IUser,
   ): Promise<UserBonusResponceDTO> {
-    return await this.bonusService.getOneUserAllUserBonuses(currentUser);
+    return await this.bonusService.getUserAllBonuses(currentUser);
   }
 
   @Put('/:id')
